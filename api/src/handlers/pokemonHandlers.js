@@ -9,7 +9,7 @@ const getAddTypes = require("../controllers/getAddTypes");
 //const getPokemonesById = require("../controllers/getPokemonesById");
 const getPokemonDetails = require("../controllers/getPokemonDetails");
 const getPokemonTypes = require("../controllers/getPokemonTypes");
-const getTypesInterno = require("../controllers/getPokemonTypesInterno");
+// const getTypesInterno = require("../controllers/getPokemonTypesInterno");
   
 const getPokemonHandler = async (req, res) => {
   const { name } = req.query;
@@ -65,11 +65,13 @@ const getPokemonDetailsHandler = async (req, res) => {
     const results = await getPokemonDetails(name);
     res.status(200).json(results);
 };
-  
+
+/*
 const getTypesInternoHandler = async (req, res) => {
     const typesInterno = await getTypesInterno();
     res.status(200).json(typesInterno);
 };
+*/
   
 const getPokemonTypesHandler = async (req, res) => {
     //const {type} = req.query ;
@@ -96,7 +98,7 @@ module.exports = {
     getPokemonesByIdHandler,
     getPokemonDetailsHandler,
     getPokemonTypesHandler,
-    getTypesInternoHandler,
+    // getTypesInternoHandler,
     getAddTypesHandler,
 };
   
