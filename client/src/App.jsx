@@ -1,14 +1,14 @@
-import {Route , Routes, useLocation} from 'react-router-dom';
+import {Home, Landing, Detail, Form} from "./views";
+import {Route, Routes, useLocation} from 'react-router-dom';
+// import NavBar from "./components/NavBar/NavBar";
 
 function App() {
-  const location = useLocation();
-  
+const location = useLocation();
+
   return (
     <div className="App">
       {location.pathname !== "/" && <NavBar/>}
-
       <br></br>        
-
       <Routes>
         <Route  path="/" element = {<Landing/>}/>
         <Route  path="/detail/:id" element = {<Detail/>}/>
@@ -18,6 +18,5 @@ function App() {
     </div>
   );
 }
-  
+
 export default App;
-  
