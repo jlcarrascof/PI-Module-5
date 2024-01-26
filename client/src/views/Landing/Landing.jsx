@@ -8,10 +8,10 @@ const Landing = () => {
      <div className={style.container}>
           
         <img className={style.backgroundImage}           
-             src = "https://i.makeagif.com/media/1-24-2015/w03MFY.gif"
+             src = "/intro-app.gif"
              alt="landing" />   
         
-        <h1 className={style.heading}>Bienvenido al proyecto Pokemon</h1>
+        <h1 className={style.heading}>Proyecto Individual Pokemon - Henry Bootcamp - Feb. 2024.</h1>
 
         <Link to= "/home"> 
           <button  className={style.centeredButton} >INGRESAR</button>
