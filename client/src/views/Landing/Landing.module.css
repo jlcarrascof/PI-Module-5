@@ -19,7 +19,7 @@
 .centeredButton {
   padding: 10px 20px;
   font-size: 18px;
-  background-color: #25878e;
+  background-color: red;
   color: white;
   border: none;
   border-radius: 5px;
@@ -28,12 +28,13 @@
 }
  
 .heading {
-  font-size: 4rem;
+  font-size: 2.5rem;
   margin-bottom: 20px; 
-  color: #cdcbcd; 
+  color: black; 
   font-family: "Arial", sans-serif;
 }
 
 .centeredButton:hover {
-  background-color: #691a7a;
+  background-color: white;
+  color: red;
 }
