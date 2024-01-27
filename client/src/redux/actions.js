@@ -9,7 +9,7 @@ export const getPokemones = () => {
             dispatch({ type: GET_POKEMONES, payload: pokemones });
         } catch (error) {
             // Manejo de error aquí, puedes dispatchear una acción de error si es necesario
-            alert("Algo salio mal");
+            alert("Algo salio mal - getPokemones");
             console.log(error);
         }
     };
@@ -33,7 +33,7 @@ export const searchPokemones = (query) => {
         }
         } catch (error) {
             // Manejo de error aquí
-            alert("Algo salio mal");
+            alert("Algo salio mal - searchPokemones");
         }
     };
 };
@@ -70,15 +70,16 @@ export const getTypes = () => {
     return async function (dispatch) {
         try {
             const response = await fetch(
-            // "http://localhost:3001/pokemon/types"
-            `${back}/pokemon/types`
-        );
+                // "http://localhost:3001/pokemon/types"
+                `${back}/pokemon/types`
+            );
 
-        const types = await response.json();
-        dispatch({ type: GET_TYPES, payload: types });
+            const types = await response.json();
+            dispatch({ type: GET_TYPES, payload: types });
+
         } catch (error) {
             // Manejo de error aquí, puedes dispatchear una acción de error si es necesario
-            alert("Algo salio mal");
+            alert("Algo salio mal - getTypes");
             console.log(error);
         }
     };
