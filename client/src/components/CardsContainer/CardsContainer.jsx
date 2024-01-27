@@ -37,7 +37,7 @@ const CardsContainer = () => {
     useEffect(() => {
         setCurrentPage(1);
     }, [selectedType, showCreated, sortOrder, searchResults]);
-    console.log(getTipos);
+    // console.log(getTipos);
 
     // Paginado
     const itemsPerPage = 12;
