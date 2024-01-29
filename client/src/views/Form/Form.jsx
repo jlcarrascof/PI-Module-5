@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import style from "./Form.module.css"
-import { getPokemones } from "../../redux/actions";
+// import { getPokemones } from "../../redux/actions";
 
 const Form = () => {
     const back = import.meta.env.VITE_APP_BACK;
@@ -150,8 +150,8 @@ const submitHandler = (event) => {
 
     if (Object.keys(newErrors).length === 0) {
       axios
-        // .post("http://localhost:3001/pokemones", form)
-        .post(`${back}/pokemones`, form)
+        .post("http://localhost:3001/pokemones", form)
+        // .post(`${back}/pokemones`, form)
         .then((res) => {
           alert("Pokemon creado")        
           resetForm();
@@ -280,8 +280,6 @@ const formIsDisabled =
          
                     {typeError && <p className={style.errorText}>{typeError}</p>}
                     {errors.types && <span className={style.errorText}>{errors.types}</span>} 
-                            {/* <label>Tipo: </label>
-                            <input type="number" value = {form.types} onChange ={changeHandler}name="types"/>  */}
            
                     <button className={`${style.buttonStyleCrear} ${formIsDisabled ? style.buttonDisabled : ""}`}   
                         disabled={formIsDisabled}
