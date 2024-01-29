@@ -1,4 +1,4 @@
-import { Landing, Home } from "./views";
+import { Landing, Home, Detail, Form } from "./views";
 import {Route, Routes, useLocation} from 'react-router-dom';
 import NavBar from "./components/NavBar/NavBar";
 
@@ -12,10 +12,8 @@ function App() {
       <br></br>        
       <Routes>
         <Route  path="/" element = {<Landing/>}/>
-{/*          
         <Route  path="/detail/:id" element = {<Detail/>}/>
         <Route  path="/create" element = {<Form/>}/>     
-*/}
         <Route  path="/home" element={<Home/>}/>
       </Routes> 
     </div>
