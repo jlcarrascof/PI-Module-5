@@ -6,6 +6,8 @@ import { searchPokemones, cleanSearch} from "../../redux/actions";
 
 const SearchBar = () => {
 
+    // These functions handle the form submission and button click events.
+
     const [query, setQuery] = useState("");
     const dispatch = useDispatch();   
 
@@ -20,6 +22,9 @@ const SearchBar = () => {
     };
 
     return (
+        
+        // This section renders the search bar with an input field 
+        // and two buttons.
 
         <div className={style.searchbar}>
             <form onSubmit={handleSearch}>
