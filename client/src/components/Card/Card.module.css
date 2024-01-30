@@ -1,3 +1,7 @@
+/* Styling the Card component with CSS. 
+   Styles for the card, heading, and links are defined.
+*/
+   
 .card {
     display: flex;
     flex-direction: column;
