@@ -1,3 +1,10 @@
+/*
+    This style applies to the main container of the detail component. 
+    It sets the container to display as a flexbox in column direction, 
+    centered both horizontally and vertically, and takes up 100% of the 
+    viewport height.
+*/
+
 .detailContainer {
     display: flex;
     flex-direction: column;
@@ -15,6 +22,12 @@ body {
   
     );
 }
+
+/*
+    This style applies to the details of the Pokémon. It sets a light green
+    background, adds padding, rounds the corners, adds a shadow, displays 
+    the content in a column, and changes the font to ‘Chakra Petch’.
+*/
 
 .detailStyle {
     background-color: #94c1be; 
