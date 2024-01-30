@@ -12,7 +12,9 @@ function App() {
     <div className="App">
       {location.pathname !== "/" && <NavBar/>}
       <br></br>        
-      // This section sets up the routes in my application
+
+      {/* This section sets up the routes in my application */}
+      
       <Routes>
         <Route  path="/" element = {<Landing/>}/>
         <Route  path="/detail/:id" element = {<Detail/>}/>
