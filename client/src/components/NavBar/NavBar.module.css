@@ -1,3 +1,8 @@
+/*
+Styling the NavBar component with CSS. Styles for the main container 
+and navigation links are defined.
+*/
+
 .mainContainer {
    display: flex;
    justify-content: space-around;
@@ -18,4 +23,3 @@
 .navLink:hover {
    color: #ff6b6b;
 }
-
