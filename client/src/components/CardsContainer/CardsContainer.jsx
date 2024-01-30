@@ -1,3 +1,6 @@
+// This section imports the necessary dependencies for the CardsContainer 
+// component.
+
 import { useSelector } from "react-redux";
 import Card from "../Card/Card";
 import style from "./CardsContainer.module.css";
@@ -9,6 +12,9 @@ import { useEffect } from "react";
 function capitalizeFirstLetter(string) {   // Funcion para primera letra mayuzcula 
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
+
+// This section defines the CardsContainer component, including its state 
+// and behavior.
 
 const CardsContainer = () => {
     const dispatch = useDispatch();   
@@ -29,15 +35,9 @@ const CardsContainer = () => {
     const [sortOrder, setSortOrder] = useState("default");
     const [currentPage, setCurrentPage] = useState(1);
 
-    //  const tipos= () => {   
-    //   //event.preventDefault(); 
-    //   dispatch(cleanSearch()); //limpiar estado    
-    // };
-
     useEffect(() => {
         setCurrentPage(1);
     }, [selectedType, showCreated, sortOrder, searchResults]);
-    // console.log(getTipos);
 
     // Paginado
     const itemsPerPage = 12;
@@ -45,10 +45,6 @@ const CardsContainer = () => {
     const endIndex = startIndex + itemsPerPage;
 
     const combinedData = searchResults.length > 0  ? searchResults : pokemones;
-
-    //  const types = ["normal","fighting","flying","poison","ground","rock","bug",
-    //                 "ghost","steel","fire","water","grass","electric","psychic",
-    //                 "ice","dragon","dark","fairy","unknow","shadow"];
 
     const types = getTipos;
 
@@ -76,11 +72,8 @@ switch (sortOrder) {
    }
 };
 
-
 const filteredAndSortedData = getFilteredAndSortedData();
-
-    //console.log(combinedData);
-  
+ 
     return(
       <div>
         <div className={style.button}>    
@@ -91,7 +84,6 @@ const filteredAndSortedData = getFilteredAndSortedData();
             <button className={style.button}  onClick={() => setSortOrder("AtaqueDesc")}>Ataque descendente</button>
 
             <select className={style.select} onChange={(e) => setSelectedType(e.target.value)} value={selectedType || ""}>
-            {/* <select className={style.select} onChange={(e) => { setSelectedType(e.target.value); tipos(e.target.value); }} value={selectedType || ""}> */}
                 <option value="">Mostrar todos</option>
                     {types.map((type) => (
                 <option key={type} value={type}>
