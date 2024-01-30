@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-// import { getPokemones, searchPokemones } from "../../redux/actions";
 import  style from "./Searchbar.module.css";
 import { searchPokemones, cleanSearch} from "../../redux/actions";
 

@@ -1,3 +1,6 @@
+// This is the Card component. 
+// It receives props and displays information about a Pokémon.
+
 import style from "./Card.module.css";
 import {Link} from "react-router-dom";
 
@@ -12,6 +15,11 @@ const Card = (props) => {
     }
 
     return(
+        
+        // This section renders the Card component. 
+        // It displays the Pokémon’s name, image, types, attack, and 
+        // whether it was created or not.
+        
         <div className={style.card}  >
             <Link to={`/detail/${props.id}`}>
                 <h1 className={style.heading}>{props.name}</h1> 
