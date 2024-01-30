@@ -57,7 +57,9 @@ const CardsContainer = () => {
      
     return typeFilter && createdFilter;
 });
-  
+
+// This switch statement sorts the filtered data based on the sortOrder value.
+
 switch (sortOrder) {
     case "nameAsc":
         return filteredData.slice().sort((a, b) => a.name.localeCompare(b.name));
@@ -71,6 +73,11 @@ switch (sortOrder) {
         return filteredData;
    }
 };
+
+// This section renders the components and handles user interaction. 
+// It includes rendering buttons for changing the data order, selectors 
+// for filtering data by type and whether they were created or not, 
+// Pokémon cards, and pagination buttons.
 
 const filteredAndSortedData = getFilteredAndSortedData();
  
