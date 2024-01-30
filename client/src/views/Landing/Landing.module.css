@@ -1,3 +1,10 @@
+/*
+  This style applies to the main container of the Landing component. 
+  It sets the container to display as a flexbox in column direction, 
+  centered both horizontally and vertically, and takes up 100% of the 
+  viewport height.
+*/
+
 .container {
   position: relative;
   width: 100%;
@@ -7,7 +14,13 @@
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
 }
-  
+
+/*
+  This style applies to the background image of the Landing component. It 
+  makes the image cover the entire container and places it behind the 
+  content.
+*/
+
 .backgroundImage {
   position: absolute;
   width: 100%;
@@ -15,6 +28,14 @@
   object-fit: cover; /* Ajusta la imagen para que cubra todo el contenedor */
   z-index: -1; /* Coloca la imagen detrás del contenido */
 }
+
+/*
+  These styles apply to the button in the Landing component. They set 
+  the padding, font size, background color, text color, border, border 
+  radius, cursor, and background color transition of the button. They 
+  also define a different background color and text color for when the 
+  cursor is over the button.
+*/
 
 .centeredButton {
   padding: 10px 20px;
