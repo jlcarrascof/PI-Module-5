@@ -4,9 +4,16 @@ import { SEARCH_ID} from "./actions";
 import { CLEAN_SEARCH } from "./actions";
 import { GET_TYPES } from "./actions";
 
+// This is the initial state of the application. 
+// It includes a list of pokemons, search results, search results by ID, 
+// and pokemon types.
+
 const initialState = {
     pokemones:[], searchResults:[],searchResultsId:[],types:[]
 };
+
+// This is the reducer function. It takes the current state and an action, 
+// and returns a new state based on the action type.
 
 const rootReducer = (state = initialState,action) =>{
     switch (action.type){
@@ -16,7 +23,6 @@ const rootReducer = (state = initialState,action) =>{
         }
         case SEARCH_POKEMONES: 
             return {...state,
-                //searchResults:action.payload,
                 searchResults:action.payload,
         };
         case SEARCH_ID: 
