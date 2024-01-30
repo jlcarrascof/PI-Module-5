@@ -1,5 +1,13 @@
+// These constants are used to identify the actions that are dispatched.
 export const GET_POKEMONES = "GET_POKEMONES";
+export const SEARCH_POKEMONES = "SEARCH_POKEMONES";
+export const SEARCH_ID = "SEARCH_ID";
+export const CLEAN_SEARCH = "CLEAN_SEARCH";
+export const GET_TYPES = "GET_TYPES";
 // const back = import.meta.env.VITE_APP_BACK;
+
+// These actions make HTTP requests to the server, get data, 
+// and dispatch actions with that data.
 
 export const getPokemones = () => {
     return async function (dispatch) {
@@ -15,7 +23,6 @@ export const getPokemones = () => {
     };
 };
 
-export const SEARCH_POKEMONES = "SEARCH_POKEMONES";
 export const searchPokemones = (query) => {
     return async function (dispatch) {
         try {
@@ -38,8 +45,6 @@ export const searchPokemones = (query) => {
     };
 };
 
-export const SEARCH_ID = "SEARCH_ID";
-
 export const searchID = (id) => {
     return async function (dispatch) {
         try {
@@ -56,15 +61,11 @@ export const searchID = (id) => {
     };
 };
 
-export const CLEAN_SEARCH = "CLEAN_SEARCH";
-
 export const cleanSearch = () => {
     return {
         type: CLEAN_SEARCH,
     };
 };
-
-export const GET_TYPES = "GET_TYPES";
 
 export const getTypes = () => {
     return async function (dispatch) {
