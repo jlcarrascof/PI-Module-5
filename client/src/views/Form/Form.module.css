@@ -1,3 +1,10 @@
+/*
+    This style applies to the main container of the form. It sets the 
+    container to display as a flexbox in column direction, centered both 
+    horizontally and vertically, and takes up 115% of the viewport height. 
+    It also sets a background color and a specific font.
+*/
+
 .formContainer {
     display: flex;
     flex-direction: column;
@@ -17,6 +24,13 @@
     color: rgb(44, 44, 120); 
     font-weight: bold; 
 }
+
+/*
+    These styles apply to the form buttons. They set the background color, 
+    text color, padding, border, cursor, and font of the buttons. They also 
+    define a different background color for when the cursor is over 
+    the .buttonStyleTipo button and when the button is disabled.
+*/
 
 .buttonStyleTipo {
     background-color: rgb(84, 126, 134); 
