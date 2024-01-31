@@ -5,6 +5,10 @@ import { getPokemones} from "../../redux/actions";
 import style from "./Home.module.css";
 import SearchBar from "../../components/SearchBar/SearchBar";
 
+// This section defines the Home component, which dispatches the 
+// getPokemones action when the component mounts and renders the 
+// SearchBar and CardsContainer components.
+
 const Home = () => {
     console.log("Hola estoy aqui");
     const dispatch  = useDispatch();
@@ -14,7 +18,10 @@ const Home = () => {
         dispatch(getPokemones())
     },[dispatch])
     
-   return(
+    // This section renders a div with the homeStyle class. Inside this div, 
+    // it renders the SearchBar and CardsContainer components.
+    
+    return(
         <div className={style.homeStyle}>
             <div className={style.searchbar}> 
                 <SearchBar/>
@@ -23,7 +30,7 @@ const Home = () => {
             <CardsContainer/>
           
         </div>
-   )
+    )
 }
 
 export default Home;

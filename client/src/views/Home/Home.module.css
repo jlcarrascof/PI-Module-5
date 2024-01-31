@@ -1,11 +1,21 @@
+/*
+  This style applies to the main container of the Home component. It sets 
+  a background gradient that goes from dark blue to dark green.
+*/
+
 .homeStyle {
     background:linear-gradient(
       to left,
       rgb(51, 97, 222) 0%,
       rgba(0,128,128,1) 100%
     );
-  
 }
+
+/*
+  This style applies to the search bar in the Home component. It makes 
+  the search bar display as a flexbox, centered horizontally, and adds a 
+  margin at the bottom.
+*/
 
 .searchbar {
     display: flex;

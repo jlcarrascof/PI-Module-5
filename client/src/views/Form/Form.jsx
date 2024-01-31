@@ -1,10 +1,13 @@
 import { useState } from "react";
 import axios from "axios";
 import style from "./Form.module.css"
-// import { getPokemones } from "../../redux/actions";
+
+// This section defines the Form component, which includes several 
+// local states, functions for handling form changes, form validation, 
+// form submission, and form reset, and the form rendering.
 
 const Form = () => {
-    const back = import.meta.env.VITE_APP_BACK;
+    // const back = import.meta.env.VITE_APP_BACK;
     const types = [
         { name: "Normal", value: 1 },
         { name: "Fighting", value: 2 },
@@ -76,6 +79,9 @@ const Form = () => {
 
     setForm({ ...form, types: updatedTypes });
 };
+
+// This function validates the form fields. It checks if each field 
+// has a valid value and if not, it adds a corresponding error message.
 
 const validate = (formData) => {
     const newErrors = {};
@@ -218,6 +224,10 @@ const formIsDisabled =
     errors.weight ||
     typeError !== "";
 
+    // This function handles form submission. It validates the form and 
+    // if there are no errors, it makes a POST request to create a new 
+    // Pokémon.
+    
     return(
         <form onSubmit={submitHandler}>
          
@@ -257,8 +267,6 @@ const formIsDisabled =
                 {errors.weight && <span className={style.errorText}>{errors.weight}</span> }                  
                                                 
                 <br></br>
-
-                {/* <label onClick={() => setShowTypeOptions(!showTypeOptions)}>Click para seleccionar tipo</label> */}
 
                 <button  className={`${style.buttonStyleTipo} ${style.buttonHover}`} 
                     onClick={() => setShowTypeOptions(!showTypeOptions)}>Seleccionar tipo</button>
