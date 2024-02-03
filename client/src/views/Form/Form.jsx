@@ -232,7 +232,7 @@ const formIsDisabled =
         <form onSubmit={submitHandler}>
          
             <div className={style.formContainer}>
-                <h1>Crea tu propio pokemon</h1>
+                <h1>Ingresar un Pokémon nuevo</h1>
 
                 <label className={style.labelStyle} >Nombre</label>               
                 <input  type="text" value = {form.name} onChange ={changeHandler} name="name"/>
