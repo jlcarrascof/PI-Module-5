@@ -26,9 +26,8 @@ const Home = () => {
             <div className={style.searchbar}> 
                 <SearchBar/>
             </div>
-            {/* <h1>Esta es la vista de Home</h1> */}
+
             <CardsContainer/>
-          
         </div>
     )
 }

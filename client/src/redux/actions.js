@@ -46,18 +46,14 @@ export const searchPokemones = (query) => {
 };
 
 export const searchID = (id) => {
-    return async function (dispatch) {
-        try {
-            const response = await fetch(
-            `http://localhost:3001/pokemones/detail/${id}`
-            // `${back}/pokemones/detail/${id}`
-            );
-        const searchResultsId = await response.json();
-        dispatch({ type: SEARCH_ID, payload: searchResultsId });
-        } catch (error) {
-        // Manejo de error aquí
-        console.error("Error searching ID:", error);
-        }
+    return function (dispatch) {
+        fetch(
+         `http://localhost:3001/pokemones/detail/${id}`
+         // `${back}/pokemones/detail/${id}`
+        ).then((response) => {
+            const searchResultsId =  response.json();  
+            dispatch({ type: SEARCH_ID, payload: searchResultsId });
+        }).catch((error) => console.error("Error searching ID:", error));        
     };
 };
 
@@ -80,7 +76,7 @@ export const getTypes = () => {
 
         } catch (error) {
             // Manejo de error aquí, puedes dispatchear una acción de error si es necesario
-            alert("Algo salio mal - getTypes");
+            alert("Algo salio mal");
             console.log(error);
         }
     };

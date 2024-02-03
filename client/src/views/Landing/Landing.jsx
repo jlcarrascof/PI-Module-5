@@ -20,7 +20,7 @@ const Landing = () => {
              src = "/intro-app.gif"
              alt="landing" />   
         
-        <h1 className={style.heading}>Proyecto Individual Pokemon - Henry Bootcamp - Feb. 2024.</h1>
+        <h1 className={style.heading}>Proyecto Individual Pokemon - Henry Bootcamp - Ene. 2024.</h1>
 
         <Link to= "/home"> 
           <button  className={style.centeredButton} >INGRESAR</button>
